@@ -1,0 +1,39 @@
+{
+  "name": "academia-studenti",
+  "version": "1.0.0",
+  "description": "Piattaforma di gestione dello studio per studenti italiani",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "cd backend && uvicorn server:app --reload --host 0.0.0.0 --port 8001",
+    "dev:frontend": "cd frontend && yarn start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "cd frontend && yarn build",
+    "test:backend": "cd backend && python -m pytest backend_test.py",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:frontend": "cd frontend && yarn install",
+    "install:all": "npm run install:backend && npm run install:frontend"
+  },
+  "keywords": [
+    "studenti",
+    "università", 
+    "studio",
+    "focus",
+    "timer",
+    "voti",
+    "materie",
+    "italian",
+    "education",
+    "ai",
+    "motivational"
+  ],
+  "author": "Academia Studenti Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/academia-studenti.git"
+  },
+  "homepage": "https://academia-studenti.vercel.app",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
